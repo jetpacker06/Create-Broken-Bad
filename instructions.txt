@@ -10,3 +10,5 @@ modmainclass.java beneath @Mod
 build.gradle:
     archivesBaseName
     ctrl r 'emptymod'
+
+pack.mcmeta
