@@ -16,8 +16,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'com.jetpacker06.emptymod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'emptymod'
+group = 'com.jetpacker06.stainless' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'stainless'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -48,7 +48,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'parchment', version: '2021.08.15-1.17.1'
+    mappings channel: 'parchment', version: '1.18.1-2022.02.13-1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -71,10 +71,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'emptymod'
+            property 'forge.enabledGameTestNamespaces', 'stainless'
 
             mods {
-                emptymod {
+                stainless {
                     source sourceSets.main
                 }
             }
@@ -96,10 +96,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'emptymod'
+            property 'forge.enabledGameTestNamespaces', 'stainless'
 
             mods {
-                emptymod {
+                stainless {
                     source sourceSets.main
                 }
             }
@@ -124,10 +124,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'emptymod'
+            property 'forge.enabledGameTestNamespaces', 'stainless'
 
             mods {
-                emptymod {
+                stainless {
                     source sourceSets.main
                 }
             }
@@ -149,10 +149,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'emptymod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'stainless', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                emptymod {
+                stainless {
                     source sourceSets.main
                 }
             }
@@ -205,12 +205,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "emptymod",
-                "Specification-Vendor"    : "emptymodsareus",
+                "Specification-Title"     : "stainless",
+                "Specification-Vendor"    : "stainlesssareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "emptymodsareus",
+                "Implementation-Vendor"   : "stainlesssareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
