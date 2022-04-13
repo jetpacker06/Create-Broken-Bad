@@ -16,8 +16,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'com.jetpacker06.stainless' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'stainless'
+group = 'com.jetpacker06.createbb' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'createbb'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -71,10 +71,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'stainless'
+            property 'forge.enabledGameTestNamespaces', 'createbb'
 
             mods {
-                stainless {
+                createbb {
                     source sourceSets.main
                 }
             }
@@ -96,10 +96,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'stainless'
+            property 'forge.enabledGameTestNamespaces', 'createbb'
 
             mods {
-                stainless {
+                createbb {
                     source sourceSets.main
                 }
             }
@@ -124,10 +124,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'stainless'
+            property 'forge.enabledGameTestNamespaces', 'createbb'
 
             mods {
-                stainless {
+                createbb {
                     source sourceSets.main
                 }
             }
@@ -149,10 +149,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'stainless', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'createbb', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                stainless {
+                createbb {
                     source sourceSets.main
                 }
             }
@@ -172,26 +172,6 @@ repositories {
     //     dir 'libs'
     // }
 }
-
-dependencies {
-    // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
-    // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
-    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'
-
-    // Real mod deobf dependency examples - these get remapped to your current mappings
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
-    // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
-
-    // Examples using mod jars from ./libs
-    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
-
-    // For more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
-}
-
 dependencies {
 
     minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'
@@ -201,16 +181,15 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 }
-// Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "stainless",
-                "Specification-Vendor"    : "stainlesssareus",
+                "Specification-Title"     : "createbb",
+                "Specification-Vendor"    : "createbbsareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "stainlesssareus",
+                "Implementation-Vendor"   : "createbbsareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
