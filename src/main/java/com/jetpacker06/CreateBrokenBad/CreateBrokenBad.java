@@ -13,8 +13,8 @@ public class CreateBrokenBad {
     public static final String MOD_ID = "createbb";
     public CreateBrokenBad() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        AllItems.register(eventBus);
         AllBlocks.register(eventBus);
+        AllItems.register(eventBus);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
