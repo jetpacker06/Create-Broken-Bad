@@ -1,7 +1,7 @@
 package com.jetpacker06.CreateBrokenBad;
 
-import com.jetpacker06.CreateBrokenBad.block.AllBlocks;
-import com.jetpacker06.CreateBrokenBad.item.AllItems;
+import com.jetpacker06.CreateBrokenBad.register.AllBlocks;
+import com.jetpacker06.CreateBrokenBad.register.AllItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;

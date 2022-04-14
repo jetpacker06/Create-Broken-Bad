@@ -1,6 +1,6 @@
-package com.jetpacker06.CreateBrokenBad.block;
+package com.jetpacker06.CreateBrokenBad.custom;
 
-import com.jetpacker06.CreateBrokenBad.item.AllItems;
+import com.jetpacker06.CreateBrokenBad.register.AllItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.BeetrootBlock;
 

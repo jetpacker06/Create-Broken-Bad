@@ -1,7 +1,7 @@
-package com.jetpacker06.CreateBrokenBad.item;
+package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
-import com.jetpacker06.CreateBrokenBad.block.AllBlocks;
+import com.jetpacker06.CreateBrokenBad.register.AllBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
