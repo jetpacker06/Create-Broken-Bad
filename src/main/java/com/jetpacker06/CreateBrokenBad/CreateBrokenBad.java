@@ -1,5 +1,9 @@
 package com.jetpacker06.CreateBrokenBad;
 
+import com.jetpacker06.CreateBrokenBad.block.AllBlocks;
+import com.jetpacker06.CreateBrokenBad.item.AllItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -15,12 +19,10 @@ public class CreateBrokenBad {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         AllBlocks.register(eventBus);
         AllItems.register(eventBus);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
+    private void clientSetup(final FMLCommonSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.EPHEDRA_CROP_BLOCK.get(), RenderType.cutout());
     }
 }
