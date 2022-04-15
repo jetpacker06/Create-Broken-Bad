@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createbb:item/ephedra_juice"
+    "layer0": "createbb:item/sudafed"
   }
 }

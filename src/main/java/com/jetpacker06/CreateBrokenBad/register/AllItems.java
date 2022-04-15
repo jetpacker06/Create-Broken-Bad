@@ -1,7 +1,7 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
-import com.jetpacker06.CreateBrokenBad.register.AllBlocks;
+import com.jetpacker06.CreateBrokenBad.custom.SudafedItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -17,8 +17,14 @@ public class AllItems {
     //public static final
     public static final RegistryObject<Item>
             EPHEDRA_SEEDS = ITEMS.register("ephedra_seeds", () -> new ItemNameBlockItem(AllBlocks.EPHEDRA_CROP_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64))),
-            EPHEDRA_JUICE = ingredient("ephedra_juice"),
-            EPHEDRA = ingredient("ephedra");
+            PSEUDOPHEDRINE = ingredient("pseudophedrine"),
+            EPHEDRA = ingredient("ephedra"),
+            WHITE_PHOSPHORUS = ingredient("white_phosphorus"),
+            RED_PHOSPHORUS = ingredient("red_phosphorus"),
+            BRINE = ingredient("brine"),
+            IODINE = ingredient("iodine"),
+            WHITE_METH = ingredient("white_meth"),
+            SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     //end items
     public static final RegistryObject<Item> ingredient(String name) {

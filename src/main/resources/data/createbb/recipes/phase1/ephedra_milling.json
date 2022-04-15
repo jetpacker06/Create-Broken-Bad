@@ -1,0 +1,33 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "createbb:ephedra"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:pseudophedrine"
+    },
+    {
+      "item": "createbb:pseudophedrine",
+      "chance":0.5
+    },
+    {
+      "item": "createbb:ephedra_seeds",
+      "count": 1,
+      "chance":1
+    },
+    {
+      "item": "createbb:ephedra_seeds",
+      "count": 1,
+      "chance":0.25
+    },
+    {
+      "item": "minecraft:lime_dye",
+      "count": 1,
+      "chance":0.1
+    }
+  ],
+  "processingTime": 60
+}

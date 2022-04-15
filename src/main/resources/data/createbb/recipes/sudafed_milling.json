@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "createbb:sudafed"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:pseudophedrine"
+    }
+  ],
+  "processingTime": 60
+}

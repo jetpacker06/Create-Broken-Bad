@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createbb:pseudophedrine"
+    },
+    {
+      "item": "createbb:red_phosphorus"
+    },
+    {
+      "item": "createbb:iodine"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 200
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:white_meth"
+    }
+  ],
+  "heatRequirement": "heated"
+}

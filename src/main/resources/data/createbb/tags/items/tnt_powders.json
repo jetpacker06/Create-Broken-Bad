@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gunpowder",
+    "createbb:white_phosphorus"
+  ]
+}

@@ -1,6 +1,15 @@
 {
   "item.createbb.ephedra_seeds": "Ephredra Seeds",
-  "item.createbb.ephedra_juice": "Ephedra Juice",
+  "item.createbb.ephedra": "Ephedra",
+  "item.createbb.pseudophedrine": "Pseudophedrine",
+  "item.createbb.brine": "Brine",
+  "item.createbb.red_phosphorus": "Red Phosphorus",
+  "item.createbb.white_phosphorus": "White Phosphorus",
+  "item.createbb.sudafed": "Sudafed",
+  "item.createbb.white_meth": "White Meth",
+  "item.createbb.iodine": "Iodine",
+
+  "sudafed_tooltip": "§8'sudos.",
 
   "block.createbb.ephedra_crop_block": "Ephedra Crop"
 }

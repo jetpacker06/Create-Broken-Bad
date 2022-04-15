@@ -1,0 +1,14 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createbb:white_phosphorus"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:red_phosphorus"
+    }
+  ],
+  "heatRequirement": "heated"
+}
