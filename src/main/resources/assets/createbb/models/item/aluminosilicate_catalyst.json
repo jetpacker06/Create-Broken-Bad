@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createbb:item/aluminosilicate_catalyst"
+  }
+}

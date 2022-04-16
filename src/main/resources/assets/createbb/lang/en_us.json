@@ -8,8 +8,24 @@
   "item.createbb.sudafed": "Sudafed",
   "item.createbb.white_meth": "White Meth",
   "item.createbb.iodine": "Iodine",
+  "item.createbb.tray": "tray",
+  "item.createbb.white_meth_tray": "White Meth",
+  "item.createbb.cracked_white_meth_tray": "Cracked White Meth Tray",
+
+  "item.createbb.copper_zinc_catalyst": "Copper Zinc Catalyst",
+  "item.createbb.cyanide": "Cyanide",
+  "item.createbb.aluminosilicate_catalyst": "Aluminosilicate Catalyst",
+  "item.createbb.aluminosilicate_bit": "Aluminosilicate Bit",
+  "item.createbb.crushed_copper": "Crushed Copper",
+  "item.createbb.crushed_zinc": "Crushed Zinc",
+  "item.createbb.nitrogenous_vegetable_matter": "Nitrogenous Vegetable Matter",
+  "item.createbb.blue_meth_sheet": "Sheet of Blue Meth",
+  "item.createbb.blue_meth": "Blue Meth",
+  "item.createbb.match": "Match",
 
   "sudafed_tooltip": "§8'sudos.",
+
+  "itemGroup.CreateBB": "Create: Broken Bad",
 
   "block.createbb.ephedra_crop_block": "Ephedra Crop"
 }
