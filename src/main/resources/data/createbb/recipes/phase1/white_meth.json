@@ -17,7 +17,8 @@
   ],
   "results": [
     {
-      "item": "createbb:white_meth"
+      "fluid": "createbb:liquid_methamphetamine",
+      "amount": 200
     }
   ],
   "heatRequirement": "heated"

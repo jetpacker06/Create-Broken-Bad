@@ -1,0 +1,16 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createbb:white_meth_tray"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:white_meth"
+    },
+    {
+      "item": "createbb:tray"
+    }
+  ]
+}
