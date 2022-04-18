@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createbb:item/cracked_blue_meth_tray"
+    "layer0": "createbb:item/oxygen_bucket"
   }
 }

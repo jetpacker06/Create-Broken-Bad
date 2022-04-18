@@ -1,0 +1,103 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    },
+    {
+      "item": "createbb:aluminosilicate_bit"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:aluminosilicate_catalyst"
+    }
+  ]
+}

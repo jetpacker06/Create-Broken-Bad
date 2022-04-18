@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "minecraft:coals"
+    },
+    {
+      "fluid": "createbb:hydrogen",
+      "amount": 50
+    },
+    {
+      "item": "createbb:copper_zinc_catalyst"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createbb:methanol",
+      "amount": 100
+    },
+    {
+      "item": "createbb:copper_zinc_catalyst"
+    }
+  ]
+}

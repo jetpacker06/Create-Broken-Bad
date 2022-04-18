@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "createbb:oxygen",
+      "amount": 25
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createbb:acetic_anhydride",
+      "amount": 50
+    }
+  ]
+}

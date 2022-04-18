@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createbb:nitrogen"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createbb:ammonia",
+      "amount": 100
+    }
+  ],
+  "heatRequirement": "heated"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "createbb:match"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:red_phosphorus",
+      "chance": 0.25
+    }
+  ],
+  "processingTime": 20
+}

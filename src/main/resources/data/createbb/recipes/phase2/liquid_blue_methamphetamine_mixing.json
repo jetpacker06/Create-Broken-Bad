@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "createbb:phenylacetone",
+      "amount": 100
+    },
+    {
+      "fluid": "createbb:methylamine",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createbb:liquid_blue_methamphetamine",
+      "amount": 200
+    }
+  ]
+}

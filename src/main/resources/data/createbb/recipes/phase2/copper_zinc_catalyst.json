@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createbb:crushed_copper"
+    },
+    {
+      "item": "createbb:crushed_zinc"
+    }
+  ],
+  "results": [
+    {
+      "item": "createbb:copper_zinc_catalyst"
+    }
+  ]
+}

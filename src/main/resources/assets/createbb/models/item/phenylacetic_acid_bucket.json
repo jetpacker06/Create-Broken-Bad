@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createbb:item/nitrogenous_vegetable_matter"
+    "layer0": "createbb:item/phenylacetic_acid_bucket"
   }
 }
