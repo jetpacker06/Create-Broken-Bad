@@ -17,6 +17,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
 import org.checkerframework.checker.units.qual.A;
 
+import java.util.concurrent.Flow;
+
 
 @Mod("createbb")
 public class CreateBrokenBad {
@@ -43,6 +45,18 @@ public class CreateBrokenBad {
                 AllFluids.ACETIC_ANHYDRIDE.get(),
                 AllFluids.PHENYLACETONE.get()
         };
+        FlowingFluid[] allFlowingFluids = {
+                AllFluids.METHAMPHETAMINE_FLOWING.get(),
+                AllFluids.BLUE_METHAMPHETAMINE_FLOWING.get(),
+                AllFluids.METHYLAMINE_FLOWING.get(),
+                AllFluids.METHANOL_FLOWING.get(),
+                AllFluids.HYDROGEN_FLOWING.get(),
+                AllFluids.OXYGEN_FLOWING.get(),
+                AllFluids.AMMONIA_FLOWING.get(),
+                AllFluids.PHENYLACETIC_ACID_FLOWING.get(),
+                AllFluids.ACETIC_ANHYDRIDE_FLOWING.get(),
+                AllFluids.PHENYLACETONE_FLOWING.get()
+        };
         LiquidBlock[] allLiquidBlocks = {
                 AllFluids.METHAMPHETAMINE_LIQUID_BLOCK.get(),
                 AllFluids.BLUE_METHAMPHETAMINE_LIQUID_BLOCK.get(),
@@ -55,8 +69,9 @@ public class CreateBrokenBad {
                 AllFluids.ACETIC_ANHYDRIDE_LIQUID_BLOCK.get(),
                 AllFluids.PHENYLACETONE_LIQUID_BLOCK.get()
         };
-        for (int i = 0;i<allFluids.length;i++) {
+        for (int i = 0;i < allFluids.length;i++) {
             ItemBlockRenderTypes.setRenderLayer(allFluids[i], RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(allFlowingFluids[i], RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(allLiquidBlocks[i], RenderType.translucent());
         }
     }

@@ -17,12 +17,9 @@ import net.minecraftforge.registries.RegistryObject;
 import static com.jetpacker06.CreateBrokenBad.CreateBrokenBad.MOD_ID;
 
 public class AllFluids {
-    public static final ResourceLocation CLEAR_STILL_RL = new ResourceLocation("createbb:block/clear_still");
-    public static final ResourceLocation CLEAR_FLOWING_RL = new ResourceLocation("createbb:block/clear_flow");
-    public static final ResourceLocation CLEAR_OVERLAY_RL = new ResourceLocation("createbb:block/clear_overlay");
-    //public static final ResourceLocation BLUE_STILL_RL = new ResourceLocation("createbb:block/blue_still");
-    //public static final ResourceLocation BLUE_FLOWING_RL = new ResourceLocation("createbb:block/blue_flow");
-    //public static final ResourceLocation BLUE_OVERLAY_RL = new ResourceLocation("createbb:block/blue_overlay");
+    public static final ResourceLocation STILL = new ResourceLocation("block/water_still");
+    public static final ResourceLocation FLOWING = new ResourceLocation("block/water_flow");
+    public static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, MOD_ID);
 
     //begin fluid 1
@@ -32,8 +29,8 @@ public class AllFluids {
             = FLUIDS.register("liquid_methamphetamine_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.METHAMPHETAMINE_PROPERTIES));
     public static final RegistryObject<LiquidBlock> METHAMPHETAMINE_LIQUID_BLOCK = AllBlocks.BLOCKS.register("liquid_methamphetamine",
             () -> new LiquidBlock(() -> AllFluids.LIQUID_METHAMPHETAMINE.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties METHAMPHETAMINE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> LIQUID_METHAMPHETAMINE.get(), () -> METHAMPHETAMINE_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties METHAMPHETAMINE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> LIQUID_METHAMPHETAMINE.get(), () -> METHAMPHETAMINE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.METHAMPHETAMINE_LIQUID_BLOCK.get()).bucket(() -> AllItems.LIQUID_METHAMPHETAMINE_BUCKET.get());
 
     //begin fluid 2
@@ -43,8 +40,8 @@ public class AllFluids {
             = FLUIDS.register("liquid_blue_methamphetamine_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.BLUE_METHAMPHETAMINE_PROPERTIES));
     public static final RegistryObject<LiquidBlock> BLUE_METHAMPHETAMINE_LIQUID_BLOCK = AllBlocks.BLOCKS.register("liquid_blue_methamphetamine",
             () -> new LiquidBlock(() -> AllFluids.LIQUID_BLUE_METHAMPHETAMINE.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties BLUE_METHAMPHETAMINE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> LIQUID_METHAMPHETAMINE.get(), () -> BLUE_METHAMPHETAMINE_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties BLUE_METHAMPHETAMINE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> LIQUID_METHAMPHETAMINE.get(), () -> BLUE_METHAMPHETAMINE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xbf03d0fc).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.BLUE_METHAMPHETAMINE_LIQUID_BLOCK.get()).bucket(() -> AllItems.LIQUID_BLUE_METHAMPHETAMINE_BUCKET.get());
 
     //begin fluid 3
@@ -54,8 +51,8 @@ public class AllFluids {
             = FLUIDS.register("methylamine_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.METHYLAMINE_PROPERTIES));
     public static final RegistryObject<LiquidBlock> METHYLAMINE_LIQUID_BLOCK = AllBlocks.BLOCKS.register("methylamine",
             () -> new LiquidBlock(() -> AllFluids.METHYLAMINE.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties METHYLAMINE_PROPERTIES  = new ForgeFlowingFluid.Properties(() -> METHYLAMINE.get(), () -> METHYLAMINE_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties METHYLAMINE_PROPERTIES  = new ForgeFlowingFluid.Properties(() -> METHYLAMINE.get(), () -> METHYLAMINE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.METHYLAMINE_LIQUID_BLOCK.get()).bucket(() -> AllItems.METHYLAMINE_BUCKET.get());
 
     //begin fluid 4
@@ -65,8 +62,8 @@ public class AllFluids {
             = FLUIDS.register("methanol_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.METHANOL_PROPERTIES));
     public static final RegistryObject<LiquidBlock> METHANOL_LIQUID_BLOCK = AllBlocks.BLOCKS.register("methanol",
             () -> new LiquidBlock(() -> AllFluids.METHANOL.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties METHANOL_PROPERTIES = new ForgeFlowingFluid.Properties(() -> METHANOL.get(), () -> METHANOL_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties METHANOL_PROPERTIES = new ForgeFlowingFluid.Properties(() -> METHANOL.get(), () -> METHANOL_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.METHANOL_LIQUID_BLOCK.get()).bucket(() -> AllItems.METHANOL_BUCKET.get());
 
     //begin fluid 5
@@ -76,8 +73,8 @@ public class AllFluids {
             = FLUIDS.register("hydrogen_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.HYDROGEN_PROPERTIES));
     public static final RegistryObject<LiquidBlock> HYDROGEN_LIQUID_BLOCK = AllBlocks.BLOCKS.register("hydrogen",
             () -> new LiquidBlock(() -> AllFluids.HYDROGEN.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties HYDROGEN_PROPERTIES = new ForgeFlowingFluid.Properties(() -> HYDROGEN.get(), () -> HYDROGEN_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties HYDROGEN_PROPERTIES = new ForgeFlowingFluid.Properties(() -> HYDROGEN.get(), () -> HYDROGEN_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.HYDROGEN_LIQUID_BLOCK.get()).bucket(() -> AllItems.HYDROGEN_BUCKET.get());
 
     //begin fluid 6
@@ -87,8 +84,8 @@ public class AllFluids {
             = FLUIDS.register("oxygen_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.OXYGEN_PROPERTIES));
     public static final RegistryObject<LiquidBlock> OXYGEN_LIQUID_BLOCK = AllBlocks.BLOCKS.register("oxygen",
             () -> new LiquidBlock(() -> AllFluids.OXYGEN.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties OXYGEN_PROPERTIES = new ForgeFlowingFluid.Properties(() -> OXYGEN.get(), () -> OXYGEN_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties OXYGEN_PROPERTIES = new ForgeFlowingFluid.Properties(() -> OXYGEN.get(), () -> OXYGEN_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.OXYGEN_LIQUID_BLOCK.get()).bucket(() -> AllItems.OXYGEN_BUCKET.get());
 
     //begin fluid 7
@@ -98,8 +95,8 @@ public class AllFluids {
             = FLUIDS.register("ammonia_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.AMMONIA_PROPERTIES));
     public static final RegistryObject<LiquidBlock> AMMONIA_LIQUID_BLOCK = AllBlocks.BLOCKS.register("ammonia",
             () -> new LiquidBlock(() -> AllFluids.AMMONIA.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties AMMONIA_PROPERTIES = new ForgeFlowingFluid.Properties(() -> AMMONIA.get(), () -> AMMONIA_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties AMMONIA_PROPERTIES = new ForgeFlowingFluid.Properties(() -> AMMONIA.get(), () -> AMMONIA_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.AMMONIA_LIQUID_BLOCK.get()).bucket(() -> AllItems.AMMONIA_BUCKET.get());
 
     //begin fluid 8
@@ -109,8 +106,8 @@ public class AllFluids {
             = FLUIDS.register("phenylacetic_acid_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.PHENYLACETIC_ACID_PROPERTIES));
     public static final RegistryObject<LiquidBlock> PHENYLACETIC_ACID_LIQUID_BLOCK = AllBlocks.BLOCKS.register("phenylacitic_acid",
             () -> new LiquidBlock(() -> AllFluids.PHENYLACETIC_ACID.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties PHENYLACETIC_ACID_PROPERTIES = new ForgeFlowingFluid.Properties(() -> PHENYLACETIC_ACID.get(), () -> PHENYLACETIC_ACID_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties PHENYLACETIC_ACID_PROPERTIES = new ForgeFlowingFluid.Properties(() -> PHENYLACETIC_ACID.get(), () -> PHENYLACETIC_ACID_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.PHENYLACETIC_ACID_LIQUID_BLOCK.get()).bucket(() -> AllItems.PHENYLACETIC_ACID_BUCKET.get());
 
     //begin fluid 9
@@ -120,8 +117,8 @@ public class AllFluids {
             = FLUIDS.register("acetic_anhydride_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.ACETIC_ANHYDRIDE_PROPERTIES));
     public static final RegistryObject<LiquidBlock> ACETIC_ANHYDRIDE_LIQUID_BLOCK = AllBlocks.BLOCKS.register("acetic_anhydride",
             () -> new LiquidBlock(() -> AllFluids.ACETIC_ANHYDRIDE.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties ACETIC_ANHYDRIDE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> ACETIC_ANHYDRIDE.get(), () -> ACETIC_ANHYDRIDE_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties ACETIC_ANHYDRIDE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> ACETIC_ANHYDRIDE.get(), () -> ACETIC_ANHYDRIDE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.ACETIC_ANHYDRIDE_LIQUID_BLOCK.get()).bucket(() -> AllItems.ACETIC_ANHYRIDE_BUCKET.get());
 
     //begin fluid 10
@@ -131,8 +128,8 @@ public class AllFluids {
             = FLUIDS.register("phenylacetone_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.PHENYLACETONE_PROPERTIES));
     public static final RegistryObject<LiquidBlock> PHENYLACETONE_LIQUID_BLOCK = AllBlocks.BLOCKS.register("phenylacetone",
             () -> new LiquidBlock(() -> AllFluids.PHENYLACETONE.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties PHENYLACETONE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> PHENYLACETONE.get(), () -> PHENYLACETONE_FLOWING.get(), FluidAttributes.Water.builder(CLEAR_STILL_RL, CLEAR_FLOWING_RL)
-            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(CLEAR_OVERLAY_RL).density(2).luminosity(2).viscosity(5))
+    public static final ForgeFlowingFluid.Properties PHENYLACETONE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> PHENYLACETONE.get(), () -> PHENYLACETONE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+            .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xffffffff).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.PHENYLACETONE_LIQUID_BLOCK.get()).bucket(() -> AllItems.PHENYLACETONE_BUCKET.get());
 
     //end fluids
