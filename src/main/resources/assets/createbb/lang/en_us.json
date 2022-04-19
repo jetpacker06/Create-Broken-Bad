@@ -44,11 +44,10 @@
   "item.createbb.acetic_anhydride_bucket": "Acetic Anhydride Bucket",
   "item.createbb.phenylacetone_bucket": "Phenylacetone Bucket",
 
-
   "item.createbb.match": "Match",
 
   "sudafed_tooltip": "§8'sudos.",
-
+  "match_tooltip": "§8Single-use firestarter.",
   "itemGroup.CreateBB": "Create: Broken Bad",
 
   "block.createbb.ephedra_crop_block": "Ephedra Crop"

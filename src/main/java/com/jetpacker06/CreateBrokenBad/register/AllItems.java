@@ -1,6 +1,7 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
+import com.jetpacker06.CreateBrokenBad.custom.MatchItem;
 import com.jetpacker06.CreateBrokenBad.custom.SudafedItem;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.FlowingFluid;
@@ -15,7 +16,7 @@ public class AllItems {
     //begin items
     public static final RegistryObject<Item>
     TRAY = ingredient("tray"),
-    MATCH = ingredient("match"),
+    MATCH = ITEMS.register("match", () -> new MatchItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     PSEUDOPHEDRINE = ingredient("pseudophedrine"),
     SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     EPHEDRA = ingredient("ephedra"),
