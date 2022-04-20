@@ -45,9 +45,12 @@
   "item.createbb.phenylacetone_bucket": "Phenylacetone Bucket",
 
   "item.createbb.match": "Match",
+  "block.createbb.brass_call_bell": "Brass Call Bell",
 
   "sudafed_tooltip": "§8'sudos.",
   "match_tooltip": "§8Single-use firestarter.",
+  "brass_call_bell_tooltip": "§8Ding!",
+
   "itemGroup.CreateBB": "Create: Broken Bad",
 
   "block.createbb.ephedra_crop_block": "Ephedra Crop"

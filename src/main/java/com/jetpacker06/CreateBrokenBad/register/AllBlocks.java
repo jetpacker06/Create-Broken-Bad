@@ -1,6 +1,8 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
+import com.jetpacker06.CreateBrokenBad.custom.BrassCallBellBlockItem;
+import com.jetpacker06.CreateBrokenBad.custom.BrassCallBellBlock;
 import com.jetpacker06.CreateBrokenBad.custom.EphedraCropBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,7 +16,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.lwjgl.system.CallbackI;
 
 import java.util.function.Supplier;
 
@@ -23,13 +24,18 @@ public class AllBlocks {
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
-        return toReturn;}
-
+        return toReturn;
+    }
+    private static <T extends Block> RegistryObject<T> registerCallBellBlock(String name, Supplier<T> block, Item.Properties pProperties) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerCallBellBlockItem(name, toReturn, pProperties);
+        return toReturn;
+    }
 
     public static final RegistryObject<Block> EPHEDRA_CROP_BLOCK = registerBlock("ephedra_crop_block", () -> new EphedraCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)), ItemGroup.CREATEBB);
-    public static final RegistryObject<Block> BRASS_CALL_BELL = registerBlock("brass_call_bell", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), ItemGroup.CREATEBB);
-
+    public static final RegistryObject<Block> BRASS_CALL_BELL = registerCallBellBlock("brass_call_bell", () -> new BrassCallBellBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), new Item.Properties().tab(ItemGroup.CREATEBB));
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
+    private static <T extends Block>RegistryObject<Item> registerCallBellBlockItem(String name, RegistryObject<T> block, Item.Properties pProperties) {return AllItems.ITEMS.register(name, () -> new BrassCallBellBlockItem(block.get(), pProperties));}
     public static void register(IEventBus eventBus) {BLOCKS.register(eventBus);}
 }

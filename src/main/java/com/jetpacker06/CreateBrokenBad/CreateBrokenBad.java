@@ -74,5 +74,6 @@ public class CreateBrokenBad {
             ItemBlockRenderTypes.setRenderLayer(allFlowingFluids[i], RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(allLiquidBlocks[i], RenderType.translucent());
         }
+        ItemBlockRenderTypes.setRenderLayer(AllBlocks.BRASS_CALL_BELL.get(), RenderType.cutout());
     }
 }
