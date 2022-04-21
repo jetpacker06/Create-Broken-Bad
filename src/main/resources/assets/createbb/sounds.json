@@ -1,0 +1,8 @@
+{
+  "brass_call_bell_ding": {
+    "subtitle": "brass_call_bell_ding",
+    "sounds": [
+      "createbb:call_bell"
+    ]
+  }
+}

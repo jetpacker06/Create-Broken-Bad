@@ -21,6 +21,8 @@ import java.util.function.Supplier;
 
 public class AllBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, CreateBrokenBad.MOD_ID);
+    public static final Item.Properties defaultProperties = new Item.Properties().tab(ItemGroup.CREATEBB);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
@@ -32,8 +34,8 @@ public class AllBlocks {
         return toReturn;
     }
 
-    public static final RegistryObject<Block> EPHEDRA_CROP_BLOCK = registerBlock("ephedra_crop_block", () -> new EphedraCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)), ItemGroup.CREATEBB);
-    public static final RegistryObject<Block> BRASS_CALL_BELL = registerCallBellBlock("brass_call_bell", () -> new BrassCallBellBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), new Item.Properties().tab(ItemGroup.CREATEBB));
+    public static final RegistryObject<Block> EPHEDRA_CROP_BLOCK = BLOCKS.register("ephedra_crop_block", () -> new EphedraCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)));
+    public static final RegistryObject<Block> BRASS_CALL_BELL = registerCallBellBlock("brass_call_bell", () -> new BrassCallBellBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), defaultProperties);
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
     private static <T extends Block>RegistryObject<Item> registerCallBellBlockItem(String name, RegistryObject<T> block, Item.Properties pProperties) {return AllItems.ITEMS.register(name, () -> new BrassCallBellBlockItem(block.get(), pProperties));}

@@ -1,5 +1,7 @@
 package com.jetpacker06.CreateBrokenBad;
 
+import com.jetpacker06.CreateBrokenBad.custom.AllSoundEvents;
+import com.jetpacker06.CreateBrokenBad.register.AllBlockEntities;
 import com.jetpacker06.CreateBrokenBad.register.AllBlocks;
 import com.jetpacker06.CreateBrokenBad.register.AllFluids;
 import com.jetpacker06.CreateBrokenBad.register.AllItems;
@@ -28,6 +30,8 @@ public class CreateBrokenBad {
         AllBlocks.register(eventBus);
         AllItems.register(eventBus);
         AllFluids.register(eventBus);
+        AllBlockEntities.register(eventBus);
+        AllSoundEvents.register(eventBus);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }

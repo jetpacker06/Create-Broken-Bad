@@ -73,6 +73,6 @@ public class MatchItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("match_toolip"));
+        pTooltipComponents.add(new TranslatableComponent("match_tooltip"));
     }
 }
