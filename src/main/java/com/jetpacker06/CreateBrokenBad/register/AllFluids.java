@@ -137,4 +137,3 @@ public class AllFluids {
         FLUIDS.register(eventBus);
     }
 }
-//todo:  fluid models, fluid block states, fluid colors
