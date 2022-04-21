@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "createbb:block/brass_call_bell"
+		"particle": "createbb:block/brass_call_bell_particle"
 	},
 	"elements": [
 		{
