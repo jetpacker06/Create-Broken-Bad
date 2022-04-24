@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "down=true": {
+      "model": "createbb:block/brass_call_bell_down"
+    },
+    "down=false": {
+      "model": "createbb:block/brass_call_bell"
+    }
+  }
+}

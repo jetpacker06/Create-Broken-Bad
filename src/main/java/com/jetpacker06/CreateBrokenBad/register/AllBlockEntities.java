@@ -13,7 +13,7 @@ public class AllBlockEntities {
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, CreateBrokenBad.MOD_ID);
     public static final RegistryObject<BlockEntityType<BrassCallBellBlockEntity>> BRASS_CALL_BELL =
             BLOCK_ENTITIES.register("brass_call_bell", () ->
-            BlockEntityType.Builder.of(BrassCallBellBlockEntity::new,
-                    AllBlocks.BRASS_CALL_BELL.get()).build(null));
+                    BlockEntityType.Builder.of(BrassCallBellBlockEntity::new,
+                            AllBlocks.BRASS_CALL_BELL.get()).build(null));
     public static void register(IEventBus eventBus) {BLOCK_ENTITIES.register(eventBus);}
 }

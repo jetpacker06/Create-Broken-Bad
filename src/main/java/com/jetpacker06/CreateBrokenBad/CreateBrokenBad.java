@@ -75,3 +75,4 @@ public class CreateBrokenBad {
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.BRASS_CALL_BELL.get(), RenderType.cutout());
     }
 }
+//todo use for meth, advancements

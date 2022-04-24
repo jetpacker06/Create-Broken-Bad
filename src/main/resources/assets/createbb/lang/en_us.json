@@ -10,6 +10,7 @@
   "item.createbb.iodine": "Iodine",
   "item.createbb.tray": "Tray",
   "item.createbb.white_meth_tray": "White Meth Tray",
+  "block.createbb.ephedra_crop_block": "Ephedra Crop",
 
   "item.createbb.copper_zinc_catalyst": "Copper-Zinc Catalyst",
   "item.createbb.cyanide": "Cyanide",
@@ -46,12 +47,11 @@
 
   "item.createbb.match": "Match",
   "block.createbb.brass_call_bell": "Brass Call Bell",
+  "block.createbb.trapped_brass_call_bell": "Trapped Brass Call Bell",
 
   "sudafed_tooltip": "§8'sudos.",
   "match_tooltip": "§8Single-use firestarter.",
   "brass_call_bell_tooltip": "§8Ding!",
 
-  "itemGroup.CreateBB": "Create: Broken Bad",
-
-  "block.createbb.ephedra_crop_block": "Ephedra Crop"
+  "itemGroup.CreateBB": "Create: Broken Bad"
 }

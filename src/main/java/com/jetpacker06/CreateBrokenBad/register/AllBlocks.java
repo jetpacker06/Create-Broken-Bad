@@ -28,9 +28,8 @@ public class AllBlocks {
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
-
-    private static <T extends Block> RegistryObject<T> registerCallBellBlock(String name, Supplier<T> block, Item.Properties pProperties) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+    private static <TYPE extends Block> RegistryObject<TYPE> registerCallBellBlock(String name, Supplier<TYPE> block, Item.Properties pProperties) {
+        RegistryObject<TYPE> toReturn = BLOCKS.register(name, block);
         registerCallBellBlockItem(name, toReturn, pProperties);
         return toReturn;
     }
@@ -38,7 +37,7 @@ public class AllBlocks {
     public static final RegistryObject<Block> EPHEDRA_CROP_BLOCK = BLOCKS.register("ephedra_crop_block", () -> new EphedraCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)));
     public static final RegistryObject<Block> BRASS_CALL_BELL = registerCallBellBlock("brass_call_bell", () -> new BrassCallBellBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), defaultProperties);
 
-    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
-    private static <T extends Block>RegistryObject<Item> registerCallBellBlockItem(String name, RegistryObject<T> block, Item.Properties pProperties) {return AllItems.ITEMS.register(name, () -> new BrassCallBellBlockItem(block.get(), pProperties));}
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
+    private static <T extends Block> RegistryObject<Item> registerCallBellBlockItem(String name, RegistryObject<T> block, Item.Properties pProperties) {return AllItems.ITEMS.register(name, () -> new BrassCallBellBlockItem(block.get(), pProperties));}
 
 }

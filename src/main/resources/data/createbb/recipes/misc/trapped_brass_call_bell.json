@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "R"
+  ],
+  "key": {
+    "B": {
+      "item": "createbb:brass_call_bell"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "createbb:trapped_brass_call_bell"
+  }
+}
