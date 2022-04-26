@@ -7,9 +7,17 @@ import com.jetpacker06.CreateBrokenBad.register.AllFluids;
 import com.jetpacker06.CreateBrokenBad.register.AllItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -27,6 +35,7 @@ public class CreateBrokenBad {
         AllBlockEntities.register(eventBus);
         AllSoundEvents.register(eventBus);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void clientSetup(final FMLCommonSetupEvent event) {
@@ -73,6 +82,13 @@ public class CreateBrokenBad {
             ItemBlockRenderTypes.setRenderLayer(allLiquidBlocks[i], RenderType.translucent());
         }
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.BRASS_CALL_BELL.get(), RenderType.cutout());
+    }
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA_SEEDS.get(), 0.65f);
+
+        });
     }
 }
 //todo use for meth, advancements
