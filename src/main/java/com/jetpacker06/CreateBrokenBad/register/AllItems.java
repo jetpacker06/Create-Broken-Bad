@@ -23,7 +23,7 @@ public class AllItems {
     SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(ItemGroup.CREATEBB).food(new FoodProperties.Builder().alwaysEat().build()))),
     SUDAFED_BOX = ITEMS.register("sudafed_box", () -> new SudafedBoxItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     EPHEDRA = ingredient("ephedra"),
-    EPHEDRA_SEEDS = ITEMS.register("ephedra_seeds", () -> new ItemNameBlockItem(AllBlocks.EPHEDRA_CROP_BLOCK.get(), new Item.Properties().tab(ItemGroup.CREATEBB).stacksTo(64))),
+    EPHEDRA_SEEDS = ITEMS.register("ephedra_seeds", () -> new ItemNameBlockItem(AllBlocks.EPHEDRA_CROP_BLOCK.get(), new Item.Properties().tab(ItemGroup.CREATEBB))),
     WHITE_PHOSPHORUS = ingredient("white_phosphorus"),
     RED_PHOSPHORUS = ingredient("red_phosphorus"),
     BRINE = ingredient("brine"),

@@ -5,7 +5,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.BeetrootBlock;
 
 public class EphedraCropBlock extends BeetrootBlock {
-    public EphedraCropBlock(Properties p_49661_) {
+    public  EphedraCropBlock(Properties p_49661_) {
         super(p_49661_);
     }
 
