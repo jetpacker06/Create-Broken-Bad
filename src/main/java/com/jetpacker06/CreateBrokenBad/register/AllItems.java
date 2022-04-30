@@ -2,7 +2,9 @@ package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
 import com.jetpacker06.CreateBrokenBad.custom.MatchItem;
+import com.jetpacker06.CreateBrokenBad.custom.SudafedBoxItem;
 import com.jetpacker06.CreateBrokenBad.custom.SudafedItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,7 +20,8 @@ public class AllItems {
     TRAY = ingredient("tray"),
     MATCH = ITEMS.register("match", () -> new MatchItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     PSEUDOPHEDRINE = ingredient("pseudophedrine"),
-    SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
+    SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(ItemGroup.CREATEBB).food(new FoodProperties.Builder().alwaysEat().build()))),
+    SUDAFED_BOX = ITEMS.register("sudafed_box", () -> new SudafedBoxItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     EPHEDRA = ingredient("ephedra"),
     EPHEDRA_SEEDS = ITEMS.register("ephedra_seeds", () -> new ItemNameBlockItem(AllBlocks.EPHEDRA_CROP_BLOCK.get(), new Item.Properties().tab(ItemGroup.CREATEBB).stacksTo(64))),
     WHITE_PHOSPHORUS = ingredient("white_phosphorus"),

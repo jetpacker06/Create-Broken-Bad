@@ -6,6 +6,7 @@
   "item.createbb.red_phosphorus": "Red Phosphorus",
   "item.createbb.white_phosphorus": "White Phosphorus",
   "item.createbb.sudafed": "Sudafed",
+  "item.createbb.sudafed_box": "Box of Sudafed",
   "item.createbb.white_meth": "White Meth",
   "item.createbb.iodine": "Iodine",
   "item.createbb.tray": "Tray",
@@ -50,6 +51,7 @@
   "block.createbb.trapped_brass_call_bell": "Trapped Brass Call Bell",
 
   "sudafed_tooltip": "§8'sudos.",
+  "sudafed_box_tooltip": "§8Box of 'sudos.",
   "match_tooltip": "§8Single-use firestarter.",
   "brass_call_bell_tooltip": "§8Ding!",
 
