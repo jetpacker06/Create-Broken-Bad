@@ -1,8 +1,10 @@
 package com.jetpacker06.CreateBrokenBad.custom;
 
 import com.jetpacker06.CreateBrokenBad.register.AllBlockEntities;
+import com.jetpacker06.CreateBrokenBad.register.AllCustomTriggerAdvancements;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -71,6 +73,9 @@ public class TrappedBrassCallBellBlock extends BaseEntityBlock {
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pState.getValue(DOWN)) {
+            if (pPlayer instanceof ServerPlayer) {
+                AllCustomTriggerAdvancements.DING.trigger((ServerPlayer) pPlayer);
+            }
             pState = pState.setValue(DOWN, true);
             pLevel.setBlock(pPos, pState, 3);
             pLevel.playSound(pPlayer,pPos, AllSoundEvents.BRASS_CALL_BELL_DING.get(), SoundSource.BLOCKS, 2f, 1f);

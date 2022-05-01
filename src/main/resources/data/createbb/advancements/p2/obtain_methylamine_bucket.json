@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "createbb:methylamine_bucket"
+    },
+    "title": "Methylamine",
+    "description": "Obtain a bucket of methylamine.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "createbb:createbb",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createbb:methylamine_bucket"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

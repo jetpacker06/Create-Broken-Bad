@@ -54,6 +54,7 @@
   "sudafed_box_tooltip": "§8Box of 'sudos.",
   "match_tooltip": "§8Single-use firestarter.",
   "brass_call_bell_tooltip": "§8Ding!",
+  "ephedra_tooltip": "§8Buy it from farmers.",
 
   "itemGroup.CreateBB": "Create: Broken Bad"
 }

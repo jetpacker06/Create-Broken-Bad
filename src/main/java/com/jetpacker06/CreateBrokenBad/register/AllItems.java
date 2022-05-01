@@ -1,6 +1,7 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
+import com.jetpacker06.CreateBrokenBad.custom.EphedraItem;
 import com.jetpacker06.CreateBrokenBad.custom.MatchItem;
 import com.jetpacker06.CreateBrokenBad.custom.SudafedBoxItem;
 import com.jetpacker06.CreateBrokenBad.custom.SudafedItem;
@@ -22,7 +23,7 @@ public class AllItems {
     PSEUDOPHEDRINE = ingredient("pseudophedrine"),
     SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(ItemGroup.CREATEBB).food(new FoodProperties.Builder().alwaysEat().build()))),
     SUDAFED_BOX = ITEMS.register("sudafed_box", () -> new SudafedBoxItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
-    EPHEDRA = ingredient("ephedra"),
+    EPHEDRA = ITEMS.register("ephedra", () -> new EphedraItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     EPHEDRA_SEEDS = ITEMS.register("ephedra_seeds", () -> new ItemNameBlockItem(AllBlocks.EPHEDRA_CROP_BLOCK.get(), new Item.Properties().tab(ItemGroup.CREATEBB))),
     WHITE_PHOSPHORUS = ingredient("white_phosphorus"),
     RED_PHOSPHORUS = ingredient("red_phosphorus"),

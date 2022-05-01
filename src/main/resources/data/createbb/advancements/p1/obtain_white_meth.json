@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "createbb:white_meth"
+    },
+    "title": "Break the Ice",
+    "description": "Crack a tray of white meth.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "createbb:p1/obtain_sudafed",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createbb:white_meth"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

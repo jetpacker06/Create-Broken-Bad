@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "createbb:liquid_blue_methamphetamine_bucket"
+    },
+    "title": "A Different Chemical Process",
+    "description": "Obtain a bucket of the blue stuff.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "createbb:p2/obtain_methylamine_bucket",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createbb:liquid_blue_methamphetamine_bucket"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

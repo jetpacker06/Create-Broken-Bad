@@ -1,23 +1,13 @@
 package com.jetpacker06.CreateBrokenBad;
 
 import com.jetpacker06.CreateBrokenBad.custom.AllSoundEvents;
-import com.jetpacker06.CreateBrokenBad.register.AllBlockEntities;
-import com.jetpacker06.CreateBrokenBad.register.AllBlocks;
-import com.jetpacker06.CreateBrokenBad.register.AllFluids;
-import com.jetpacker06.CreateBrokenBad.register.AllItems;
+import com.jetpacker06.CreateBrokenBad.register.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -85,10 +75,10 @@ public class CreateBrokenBad {
     }
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA.get(), 0.3f);
-            ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA_SEEDS.get(), 0.65f);
-
+                    ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA.get(), 0.3f);
+                    ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA_SEEDS.get(), 0.65f);
         });
+        AllCustomTriggerAdvancements.register();
     }
 }
 //todo use for meth, advancements

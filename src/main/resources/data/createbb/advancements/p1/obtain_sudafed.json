@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "createbb:sudafed"
+    },
+    "title": "'Sudos.",
+    "description": "Create the infamous decongestant.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "createbb:p1/obtain_ephedra",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createbb:sudafed"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
