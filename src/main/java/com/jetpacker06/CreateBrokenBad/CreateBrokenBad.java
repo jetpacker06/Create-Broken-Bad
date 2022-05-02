@@ -81,4 +81,4 @@ public class CreateBrokenBad {
         AllCustomTriggerAdvancements.register();
     }
 }
-//todo use for meth, advancements
+//todo use for meth
