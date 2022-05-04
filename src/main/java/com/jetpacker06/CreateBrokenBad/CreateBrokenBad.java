@@ -13,6 +13,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import java.io.File;
+
 
 @Mod("createbb")
 public class CreateBrokenBad {
@@ -25,7 +27,7 @@ public class CreateBrokenBad {
         AllBlockEntities.register(eventBus);
         AllSoundEvents.register(eventBus);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void clientSetup(final FMLCommonSetupEvent event) {
@@ -73,12 +75,12 @@ public class CreateBrokenBad {
         }
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.BRASS_CALL_BELL.get(), RenderType.cutout());
     }
-    private void setup(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-                    ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA.get(), 0.3f);
-                    ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA_SEEDS.get(), 0.65f);
+            ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(AllItems.EPHEDRA_SEEDS.get(), 0.65f);
         });
+        
         AllCustomTriggerAdvancements.register();
     }
 }
-//todo use for meth
