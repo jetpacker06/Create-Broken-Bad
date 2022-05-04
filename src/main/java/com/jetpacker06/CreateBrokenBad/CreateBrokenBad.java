@@ -10,6 +10,7 @@ import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -30,7 +31,7 @@ public class CreateBrokenBad {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }
-    private void clientSetup(final FMLCommonSetupEvent event) {
+    private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.EPHEDRA_CROP_BLOCK.get(), RenderType.cutout());
         FlowingFluid[] allFluids = {
                 AllFluids.LIQUID_METHAMPHETAMINE.get(),
