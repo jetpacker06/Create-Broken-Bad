@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E"
+  ],
+  "key": {
+    "E": {
+      "item": "createbb:ephedra"
+    }
+  },
+  "result": {
+    "item": "createbb:ephedra_seeds"
+  }
+}

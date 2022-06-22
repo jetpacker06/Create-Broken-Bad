@@ -1,0 +1,28 @@
+phase I
+pseudoephedrine + iodine + red phosphorus + water in heated basin = white m fluid
+pour white m fluid over tray, press 2x = cracked white m sheet
+mech craft for dust and tray back
+iodine = heated mix water to get brine, mix brine
+red phosphorus = grind limestone to get white phosphate, heated mix to get red phosphorus
+pseudoephedrine milled from ephedra crop
+
+phase II
+methylamine = mix ammonia + methanol with aluminosilicate catalyst
+methanol = coal/charcoal + hydrogen with copper-zinc catalyst
+heated mix water with copper-zinc catalyst to produce hydrogen and oxygen
+copper-zinc catalyst = crushed copper + crushed zinc
+mix beetroot/potatoes = nitrogen
+heated mix nitrogen = ammonia
+crush clay for 10% aluminosilicate bit 50% clay, 32 aluminosilicate bits = aluminosilicate catalyst
+cyanide = crush apples
+phenylacetic acid = cyanide mixed with water, water not consumed
+acetic anhydride = sugar + oxygen
+phenylacetone = acetic anhydride + phenylacetic acid
+blue m fluid = phenylacetone + methlymine
+pour blue m fluid over tray, press 4x = cracked blue m sheet
+press for dust and tray back
+
+misc
+mech craft stick + red phosphorus = 4 matches
+white phosphorus can replace gunpowder in tnt
+tray = 3 forge:plates/iron
