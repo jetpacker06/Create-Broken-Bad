@@ -2,6 +2,7 @@ package com.jetpacker06.CreateBrokenBad.custom;
 
 import com.jetpacker06.CreateBrokenBad.register.AllBlockEntities;
 import com.jetpacker06.CreateBrokenBad.register.AllCustomTriggerAdvancements;
+import com.jetpacker06.CreateBrokenBad.register.AllSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
@@ -91,6 +92,12 @@ public class BrassCallBellBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new BrassCallBellBlockEntity(pPos, pState);
+    }
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+        pLevel.removeBlockEntity(pPos);
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
     @Nullable

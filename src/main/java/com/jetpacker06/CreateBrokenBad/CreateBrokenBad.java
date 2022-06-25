@@ -1,6 +1,6 @@
 package com.jetpacker06.CreateBrokenBad;
 
-import com.jetpacker06.CreateBrokenBad.custom.AllSoundEvents;
+import com.jetpacker06.CreateBrokenBad.register.AllSoundEvents;
 import com.jetpacker06.CreateBrokenBad.register.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -13,8 +13,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
-import java.io.File;
 
 
 @Mod("createbb")
