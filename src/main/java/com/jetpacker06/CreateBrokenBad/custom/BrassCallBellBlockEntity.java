@@ -10,11 +10,10 @@ import org.apache.logging.log4j.Logger;
 
 public class BrassCallBellBlockEntity extends BlockEntity {
     private int ticksRemaining = 5;
-    public static Logger LOGG = LogManager.getLogger();
     public BrassCallBellBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(AllBlockEntities.BRASS_CALL_BELL.get(), pWorldPosition, pBlockState);
     }
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, BrassCallBellBlockEntity pBlockEntity) {
+    public static void clientTick(Level pLevel, BlockPos pPos, BlockState pState, BrassCallBellBlockEntity pBlockEntity) {
         if (pState.getValue(BrassCallBellBlock.DOWN)) {
             if (pBlockEntity.ticksRemaining > 0) {
                 pBlockEntity.ticksRemaining--;

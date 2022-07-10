@@ -26,8 +26,6 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
@@ -36,7 +34,6 @@ public class BrassCallBellBlock extends BaseEntityBlock {
     public BrassCallBellBlock(Properties p_49795_) {
         super(p_49795_);
     }
-    public static Logger LOGGER = LogManager.getLogger();
     public static BooleanProperty DOWN = BooleanProperty.create("down");
 
     @Override
@@ -71,17 +68,13 @@ public class BrassCallBellBlock extends BaseEntityBlock {
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (!pState.getValue(DOWN)) {
-            if (pPlayer instanceof ServerPlayer) {
-                AllCustomTriggerAdvancements.DING.trigger((ServerPlayer) pPlayer);
-            }
-            pState = pState.setValue(DOWN, true);
-            pLevel.setBlock(pPos, pState, 3);
-            pLevel.playSound(pPlayer,pPos, AllSoundEvents.BRASS_CALL_BELL_DING.get(), SoundSource.BLOCKS, 2f, 1f);
-            return InteractionResult.sidedSuccess(pLevel.isClientSide);
-        } else {
-            return InteractionResult.PASS;
+        if (pPlayer instanceof ServerPlayer) {
+            AllCustomTriggerAdvancements.DING.trigger((ServerPlayer) pPlayer);
         }
+        pState = pState.setValue(DOWN, true);
+        pLevel.setBlock(pPos, pState, 3);
+        pLevel.playSound(pPlayer,pPos, AllSoundEvents.BRASS_CALL_BELL_DING.get(), SoundSource.BLOCKS, 2f, 1f);
+        return InteractionResult.sidedSuccess(pLevel.isClientSide);
     }
     @Override
     public RenderShape getRenderShape(BlockState pState) {
@@ -103,6 +96,6 @@ public class BrassCallBellBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, AllBlockEntities.BRASS_CALL_BELL.get(), BrassCallBellBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, AllBlockEntities.BRASS_CALL_BELL.get(), pLevel.isClientSide ? BrassCallBellBlockEntity::clientTick : null);
     }
 }

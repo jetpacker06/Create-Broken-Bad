@@ -1,10 +1,7 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
-import com.jetpacker06.CreateBrokenBad.custom.EphedraItem;
-import com.jetpacker06.CreateBrokenBad.custom.MatchItem;
-import com.jetpacker06.CreateBrokenBad.custom.SudafedBoxItem;
-import com.jetpacker06.CreateBrokenBad.custom.SudafedItem;
+import com.jetpacker06.CreateBrokenBad.custom.*;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.FlowingFluid;
@@ -18,7 +15,6 @@ public class AllItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, CreateBrokenBad.MOD_ID);
     //begin items
     public static final RegistryObject<Item>
-    TRAY = ingredient("tray"),
     MATCH = ITEMS.register("match", () -> new MatchItem(new Item.Properties().tab(ItemGroup.CREATEBB))),
     PSEUDOPHEDRINE = ingredient("pseudophedrine"),
     SUDAFED = ITEMS.register("sudafed", () -> new SudafedItem(new Item.Properties().tab(ItemGroup.CREATEBB).food(new FoodProperties.Builder().alwaysEat().build()))),
@@ -29,8 +25,7 @@ public class AllItems {
     RED_PHOSPHORUS = ingredient("red_phosphorus"),
     BRINE = ingredient("brine"),
     IODINE = ingredient("iodine"),
-    WHITE_METH_TRAY = ingredient("white_meth_tray"),
-    WHITE_METH = ingredient("white_meth"),
+    WHITE_METH = ITEMS.register("white_meth", () ->new MethItem.White(new Item.Properties().tab(ItemGroup.CREATEBB))),
 
     CRUSHED_COPPER = ingredient("crushed_copper"),
     CRUSHED_ZINC = ingredient("crushed_zinc"),
@@ -38,10 +33,8 @@ public class AllItems {
     CYANIDE = ingredient("cyanide"),
     ALUMINOSILICATE_CATALYST = ingredient("aluminosilicate_catalyst", new Item.Properties().stacksTo(1).tab(ItemGroup.CREATEBB)),
     ALUMINOSILICATE_BIT = ingredient("aluminosilicate_bit"),
-
     NITROGEN = ingredient("nitrogen"),
-    BLUE_METH_TRAY = ingredient("blue_meth_tray"),
-    BLUE_METH = ingredient("blue_meth", new Item.Properties().tab(ItemGroup.CREATEBB).rarity(Rarity.RARE)),
+    BLUE_METH = ITEMS.register("blue_meth", () -> new MethItem.Blue(new Item.Properties().tab(ItemGroup.CREATEBB))),
 
 
 
@@ -58,7 +51,7 @@ public class AllItems {
 
     //end items
     public static RegistryObject<Item> ingredient(String name) {
-        return ITEMS.register(name, () -> new Item(new Item.Properties().tab(ItemGroup.CREATEBB)));
+        return ingredient(name, new Item.Properties().tab(ItemGroup.CREATEBB));
     }
     public static RegistryObject<Item> bucket(String name, RegistryObject<FlowingFluid> fluid) {
         return ITEMS.register(name, () -> new BucketItem(fluid, new Item.Properties().tab(ItemGroup.CREATEBB).craftRemainder(Items.BUCKET)));

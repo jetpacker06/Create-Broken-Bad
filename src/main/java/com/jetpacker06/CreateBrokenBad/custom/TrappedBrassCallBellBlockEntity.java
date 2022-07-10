@@ -14,7 +14,7 @@ public class TrappedBrassCallBellBlockEntity extends BlockEntity {
     public TrappedBrassCallBellBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(AllBlockEntities.TRAPPED_BRASS_CALL_BELL.get(), pWorldPosition, pBlockState);
     }
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, TrappedBrassCallBellBlockEntity pBlockEntity) {
+    public static void clientTick(Level pLevel, BlockPos pPos, BlockState pState, TrappedBrassCallBellBlockEntity pBlockEntity) {
         if (pState.getValue(BrassCallBellBlock.DOWN)) {
             if (pBlockEntity.ticksRemaining > 0) {
                 pBlockEntity.ticksRemaining--;

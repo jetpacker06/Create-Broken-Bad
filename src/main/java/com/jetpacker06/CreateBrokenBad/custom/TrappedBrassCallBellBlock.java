@@ -35,8 +35,8 @@ public class TrappedBrassCallBellBlock extends BaseEntityBlock {
     public TrappedBrassCallBellBlock(Properties p_49795_) {
         super(p_49795_);
     }
-    public boolean isSignalSource(BlockState pState) {
-        return true;
+    public int getSignal(BlockState pBlockState, BlockGetter pBlockAccess, BlockPos pPos, Direction pSide) {
+        return pBlockState.getValue(DOWN) ? 15 : 0;
     }
 
     public static BooleanProperty DOWN = BooleanProperty.create("down");
@@ -73,17 +73,14 @@ public class TrappedBrassCallBellBlock extends BaseEntityBlock {
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (!pState.getValue(DOWN)) {
-            if (pPlayer instanceof ServerPlayer) {
-                AllCustomTriggerAdvancements.DING.trigger((ServerPlayer) pPlayer);
-            }
-            pState = pState.setValue(DOWN, true);
-            pLevel.setBlock(pPos, pState, 3);
-            pLevel.playSound(pPlayer,pPos, AllSoundEvents.BRASS_CALL_BELL_DING.get(), SoundSource.BLOCKS, 2f, 1f);
-            return InteractionResult.sidedSuccess(pLevel.isClientSide);
-        } else {
-            return InteractionResult.PASS;
+        if (pPlayer instanceof ServerPlayer) {
+            AllCustomTriggerAdvancements.DING.trigger((ServerPlayer) pPlayer);
         }
+        pState = pState.setValue(DOWN, true);
+        pLevel.setBlock(pPos, pState, 3);
+        pLevel.playSound(pPlayer,pPos, AllSoundEvents.BRASS_CALL_BELL_DING.get(), SoundSource.BLOCKS, 2f, 1f);
+       // this.isSignalSource
+        return InteractionResult.sidedSuccess(pLevel.isClientSide);
     }
     @Override
     public RenderShape getRenderShape(BlockState pState) {
@@ -104,12 +101,6 @@ public class TrappedBrassCallBellBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, AllBlockEntities.TRAPPED_BRASS_CALL_BELL.get(), TrappedBrassCallBellBlockEntity::tick);
-    }
-
-    @Override
-    public int getSignal(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
-        if (pState.getValue(DOWN)) return 15;
-        else return 0;
+        return createTickerHelper(pBlockEntityType, AllBlockEntities.TRAPPED_BRASS_CALL_BELL.get(), pLevel.isClientSide ? TrappedBrassCallBellBlockEntity::clientTick : null);
     }
 }

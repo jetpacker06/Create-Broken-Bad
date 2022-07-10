@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createbb:block/tray",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createbb:block/tray"
+    },
+    "facing=south": {
+      "model": "createbb:block/tray",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createbb:block/tray",
+      "y": 270
+    }
+  }
+}

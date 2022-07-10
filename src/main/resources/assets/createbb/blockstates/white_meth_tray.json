@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createbb:block/white_meth_tray",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createbb:block/white_meth_tray"
+    },
+    "facing=south": {
+      "model": "createbb:block/white_meth_tray",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createbb:block/white_meth_tray",
+      "y": 270
+    }
+  }
+}

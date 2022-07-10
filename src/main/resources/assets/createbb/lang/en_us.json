@@ -9,8 +9,8 @@
   "item.createbb.sudafed_box": "Box of Sudafed",
   "item.createbb.white_meth": "White Meth",
   "item.createbb.iodine": "Iodine",
-  "item.createbb.tray": "Tray",
-  "item.createbb.white_meth_tray": "White Meth Tray",
+  "block.createbb.tray": "Tray",
+  "block.createbb.white_meth_tray": "White Meth Tray",
   "block.createbb.ephedra_crop_block": "Ephedra Crop",
 
   "item.createbb.copper_zinc_catalyst": "Copper-Zinc Catalyst",
@@ -22,7 +22,7 @@
   "item.createbb.nitrogen": "Nitrogen",
   "item.createbb.blue_meth_sheet": "Sheet of Blue Meth",
   "item.createbb.blue_meth": "Blue Meth",
-  "item.createbb.blue_meth_tray": "Blue Meth Tray",
+  "block.createbb.blue_meth_tray": "Blue Meth Tray",
 
   "fluid.createbb.liquid_methamphetamine": "Liquid Methamphetamine",
   "fluid.createbb.liquid_blue_methamphetamine": "Liquid Blue Methamphetamine",
