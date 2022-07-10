@@ -101,6 +101,6 @@ public class TrappedBrassCallBellBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, AllBlockEntities.TRAPPED_BRASS_CALL_BELL.get(), pLevel.isClientSide ? TrappedBrassCallBellBlockEntity::clientTick : null);
+        return createTickerHelper(pBlockEntityType, AllBlockEntities.TRAPPED_BRASS_CALL_BELL.get(), TrappedBrassCallBellBlockEntity::tick);
     }
 }

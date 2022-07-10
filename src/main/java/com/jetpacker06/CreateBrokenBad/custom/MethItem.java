@@ -1,7 +1,10 @@
 package com.jetpacker06.CreateBrokenBad.custom;
 
 import com.jetpacker06.CreateBrokenBad.register.AllBlocks;
+import com.jetpacker06.CreateBrokenBad.register.AllSoundEvents;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
@@ -23,18 +26,17 @@ public class MethItem extends Item {
                 newBlock.defaultBlockState().setValue(TrayBlock.FACING, direction),
                 3
             );
+            pContext.getLevel().playSound(pContext.getPlayer(),pContext.getClickedPos(), SoundEvents.SAND_HIT, SoundSource.BLOCKS, 2f, 1f);
             pContext.getItemInHand().shrink(1);
         }
         return InteractionResult.CONSUME;
     }
     public static class Blue extends MethItem {
-
         public Blue(Properties pProperties) {
             super(pProperties);
         }
     }
     public static class White extends MethItem {
-
         public White(Properties pProperties) {
             super(pProperties);
         }
