@@ -29,9 +29,9 @@ public class  AllBlocks {
     public static final RegistryObject<Block> EPHEDRA_CROP_BLOCK = BLOCKS.register("ephedra_crop_block", () -> new EphedraCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)));
     public static final RegistryObject<Block> BRASS_CALL_BELL = registerBlock("brass_call_bell", () -> new BrassCallBellBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), ItemGroup.CREATEBB);
     public static final RegistryObject<Block> TRAPPED_BRASS_CALL_BELL = registerBlock("trapped_brass_call_bell", () -> new TrappedBrassCallBellBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)), ItemGroup.CREATEBB);
-    public static final RegistryObject<Block> BLUE_METH_TRAY = registerBlock("blue_meth_tray", () -> new TrayBlock.Blue(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(6).explosionResistance(9).requiresCorrectToolForDrops()), ItemGroup.CREATEBB);
-    public static final RegistryObject<Block> TRAY = registerBlock("tray", () -> new TrayBlock.Empty(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(6).explosionResistance(9).requiresCorrectToolForDrops()), ItemGroup.CREATEBB);
-    public static final RegistryObject<Block> WHITE_METH_TRAY = registerBlock("white_meth_tray", () -> new TrayBlock.White(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(6).explosionResistance(9).requiresCorrectToolForDrops()), ItemGroup.CREATEBB);
+    public static final RegistryObject<Block> BLUE_METH_TRAY = registerBlock("blue_meth_tray", () -> new TrayBlock.Blue(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(0.5f).explosionResistance(0.5f)), ItemGroup.CREATEBB);
+    public static final RegistryObject<Block> TRAY = registerBlock("tray", () -> new TrayBlock.Empty(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(0.5f).explosionResistance(0.5f)), ItemGroup.CREATEBB);
+    public static final RegistryObject<Block> WHITE_METH_TRAY = registerBlock("white_meth_tray", () -> new TrayBlock.White(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(0.5f).explosionResistance(0.5f)), ItemGroup.CREATEBB);
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

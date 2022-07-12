@@ -73,7 +73,7 @@ public class CreateBrokenBad {
             ItemBlockRenderTypes.setRenderLayer(allLiquidBlocks[i], RenderType.translucent());
         }
         ItemBlockRenderTypes.setRenderLayer(AllBlocks.BRASS_CALL_BELL.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(AllBlocks.BLUE_METH_TRAY.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(AllBlocks.BLUE_METH_TRAY.get(), RenderType.cutout());
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
