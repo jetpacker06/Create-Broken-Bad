@@ -40,7 +40,7 @@ public class AllFluids {
             = FLUIDS.register("liquid_blue_methamphetamine_flowing", () -> new ForgeFlowingFluid.Flowing(AllFluids.BLUE_METHAMPHETAMINE_PROPERTIES));
     public static final RegistryObject<LiquidBlock> BLUE_METHAMPHETAMINE_LIQUID_BLOCK = AllBlocks.BLOCKS.register("liquid_blue_methamphetamine",
             () -> new LiquidBlock(() -> AllFluids.LIQUID_BLUE_METHAMPHETAMINE.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));
-    public static final ForgeFlowingFluid.Properties BLUE_METHAMPHETAMINE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> LIQUID_METHAMPHETAMINE.get(), () -> BLUE_METHAMPHETAMINE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
+    public static final ForgeFlowingFluid.Properties BLUE_METHAMPHETAMINE_PROPERTIES = new ForgeFlowingFluid.Properties(() -> LIQUID_BLUE_METHAMPHETAMINE.get(), () -> BLUE_METHAMPHETAMINE_FLOWING.get(), FluidAttributes.Water.builder(STILL, FLOWING)
             .temperature(300).sound(SoundEvents.BOTTLE_FILL).overlay(OVERLAY).density(2).color(0xbf03d0fc).luminosity(2).viscosity(5))
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> AllFluids.BLUE_METHAMPHETAMINE_LIQUID_BLOCK.get()).bucket(() -> AllItems.LIQUID_BLUE_METHAMPHETAMINE_BUCKET.get());
 
