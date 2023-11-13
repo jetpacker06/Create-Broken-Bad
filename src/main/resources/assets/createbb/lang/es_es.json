@@ -58,6 +58,7 @@
   "brass_call_bell_tooltip": "¡§8Ding!",
   "ephedra_tooltip": "§8Cómpralo a los granjeros.",
 
+  "effect.createbb.addiction": "Adiccion",
 
   "itemGroup.CreateBB": "Create: Broken Bad"
 }

@@ -57,7 +57,8 @@
     "match_tooltip": "§8Incendiário de uso único.",
     "brass_call_bell_tooltip": "§8Ding!",
     "ephedra_tooltip": "§8Compre de fazendeiros.",
-  
+
+    "effect.createbb.addiction": "Vício",
   
     "itemGroup.CreateBB": "Create: Broken Bad"
   }

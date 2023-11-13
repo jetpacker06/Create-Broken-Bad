@@ -3,6 +3,7 @@ package com.jetpacker06.CreateBrokenBad.register;
 import com.jetpacker06.CreateBrokenBad.item.*;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.util.NonNullFunction;
 
@@ -64,6 +65,7 @@ public class CBBItems {
         IODINE = REGISTRATE.item("iodine", Item::new)
                 .register();
         WHITE_METH = REGISTRATE.item("white_meth", MethItem.White::new)
+                .properties(x -> new Item.Properties().tab(Tab.CREATEBB).food(new FoodProperties.Builder().fast().alwaysEat().nutrition(0).build()))
                 .register();
         CRUSHED_COPPER = REGISTRATE.item("crushed_copper", Item::new)
                 .register();
@@ -82,6 +84,7 @@ public class CBBItems {
         NITROGEN = REGISTRATE.item("nitrogen", Item::new)
                 .register();
         BLUE_METH = REGISTRATE.item("blue_meth", MethItem.Blue::new)
+                .properties(x -> new Item.Properties().tab(Tab.CREATEBB).food(new FoodProperties.Builder().fast().alwaysEat().nutrition(0).build()))
                 .register();
 
     }

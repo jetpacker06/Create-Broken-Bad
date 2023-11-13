@@ -29,6 +29,7 @@ public class CreateBrokenBad {
         CBBBlockEntities.register(registrate);
 
         AllSoundEvents.register(eventBus);
+        CBBEffects.register(eventBus);
         eventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);

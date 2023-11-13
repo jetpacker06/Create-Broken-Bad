@@ -58,6 +58,13 @@
   "brass_call_bell_tooltip": "§8Ding!",
   "ephedra_tooltip": "§8Buy it from farmers.",
 
+  "effect.createbb.addiction": "Addiction",
+  "commands.createbb.addiction.show": "§bAddiction data: §aAddiction=%s§a, Withdrawal=%s, §aTolerance=%s, §aToxicity=%s",
+  "commands.createbb.addiction.clear": "§bAddiction was removed",
+  "commands.createbb.addiction.set_addiction": "§bAddiction was set to %s",
+  "commands.createbb.addiction.set_withdrawal": "§bWithdrawal was set to %s",
+  "commands.createbb.addiction.set_tolerance": "§bTolerance was set to %s",
+  "commands.createbb.addiction.set_toxicity": "§bToxicity was set to %s",
 
   "itemGroup.CreateBB": "Create: Broken Bad"
 }
