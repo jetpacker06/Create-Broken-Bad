@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "createbb:zinc_dust"
+    "item": "createbb:crushed_zinc"
   },
   "result": "create:zinc_ingot",
   "experience": 0.1,
