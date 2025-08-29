@@ -57,5 +57,8 @@
   "brass_call_bell_tooltip": "§8Ding!",
   "ephedra_tooltip": "§8Kauf es von Bauern.",
 
-  "itemGroup.CreateBB": "Create: Broken Bad"
+  "itemGroup.CreateBB": "Create: Broken Bad",
+
+  "item.createbb.packed_flour": "Packed Flour",
+  "item.createbb.popcorners": "Popcorners"
 }

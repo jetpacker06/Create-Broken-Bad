@@ -1,0 +1,18 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createbb:packed_flour"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 125
+    }
+
+  ],
+  "results": [
+    {
+      "id": "createbb:popcorners"
+    }
+  ]
+}

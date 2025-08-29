@@ -58,5 +58,8 @@
     "ephedra_tooltip": "§8Compre de fazendeiros.",
   
   
-    "itemGroup.CreateBB": "Create: Broken Bad"
+    "itemGroup.CreateBB": "Create: Broken Bad",
+
+  "item.createbb.packed_flour": "Packed Flour",
+  "item.createbb.popcorners": "Popcorners"
   }

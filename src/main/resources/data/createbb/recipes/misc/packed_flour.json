@@ -1,0 +1,22 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:flour"
+    },
+    {
+      "item": "create:flour"
+    },
+    {
+      "item": "create:flour"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:packed_flour"
+    },
+    {
+      "id": "createbb:packed_flour"
+    }
+  ]
+}
