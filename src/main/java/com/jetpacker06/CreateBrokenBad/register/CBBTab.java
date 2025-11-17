@@ -15,6 +15,7 @@ public class CBBTab {
     public static final DeferredRegister<CreativeModeTab> TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateBrokenBad.MOD_ID);
 
+    @SuppressWarnings("unused")
     public static final Supplier<CreativeModeTab> CREATEBB = TABS.register("createbb", () -> CreativeModeTab.builder()
             .withTabsBefore(AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getId())
             .icon(CBBItems.BLUE_METH.get()::getDefaultInstance)
@@ -30,8 +31,5 @@ public class CBBTab {
 
     public static void register(IEventBus bus) {
         TABS.register(bus);
-    }
-    public static void log(Object msg) {
-        CreateBrokenBad.log(msg);
     }
 }
