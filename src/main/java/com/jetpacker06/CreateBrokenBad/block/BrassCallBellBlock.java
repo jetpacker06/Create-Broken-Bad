@@ -1,6 +1,5 @@
 package com.jetpacker06.CreateBrokenBad.block;
 
-import com.jetpacker06.CreateBrokenBad.register.AllCustomTriggerAdvancements;
 import com.jetpacker06.CreateBrokenBad.register.AllSoundEvents;
 import com.jetpacker06.CreateBrokenBad.register.CBBAdvancements;
 import com.jetpacker06.CreateBrokenBad.register.CBBBlockEntityTypes;

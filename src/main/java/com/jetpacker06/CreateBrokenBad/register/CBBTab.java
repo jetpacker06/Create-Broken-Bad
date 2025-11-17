@@ -2,9 +2,6 @@ package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
 import com.simibubi.create.AllCreativeModeTabs;
-import com.simibubi.create.AllItems;
-import com.simibubi.create.Create;
-import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;

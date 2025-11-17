@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": {
+    "createbb:ephedra": {
+      "chance": 0.65
+    },
+    "createbb:ephedra_seeds": {
+      "chance": 0.30
+    }
+  }
+}
