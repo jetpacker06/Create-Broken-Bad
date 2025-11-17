@@ -1,0 +1,19 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "createbb:tray"
+    },
+    {
+      "fluid": "createbb:liquid_blue_methamphetamine",
+      "amount": 250,
+      "type": "neoforge:single"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:blue_meth_tray",
+      "amount": 1
+    }
+  ]
+}

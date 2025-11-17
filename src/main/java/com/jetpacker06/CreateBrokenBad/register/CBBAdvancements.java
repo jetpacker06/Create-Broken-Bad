@@ -8,6 +8,6 @@ public class CBBAdvancements {
     public static SimpleCreateTrigger DING;
 
     public static void register() {
-        DING = AllTriggers.addSimple("ding");
+        DING = AllTriggers.addSimple("use_brass_call_bell");
     }
 }

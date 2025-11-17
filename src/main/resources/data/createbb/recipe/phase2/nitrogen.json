@@ -1,0 +1,25 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:beetroot"
+      },
+      {
+        "item": "minecraft:beetroot_seeds"
+      },
+      {
+        "item": "minecraft:potato"
+      }
+    ]
+  },
+  "result": {
+    "id": "createbb:nitrogen",
+    "amount": 1
+  },
+  "accept_mirrored": true
+}

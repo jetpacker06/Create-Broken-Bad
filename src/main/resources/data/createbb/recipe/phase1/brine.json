@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 200,
+      "type": "neoforge:single"
+    },
+    {
+      "item": "createbb:aluminosilicate_catalyst"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:brine",
+      "amount": 1
+    },
+    {
+      "id": "createbb:aluminosilicate_catalyst",
+      "amount": 1
+    }
+  ],
+  "heatRequirement": "heated"
+}

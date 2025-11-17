@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:storage_blocks/brass"
+  },
+  "result": {
+    "id": "createbb:brass_call_bell",
+    "count": 1
+  }
+}

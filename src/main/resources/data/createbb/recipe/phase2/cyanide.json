@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:cyanide",
+      "amount": 1
+    }
+  ],
+  "processingTime": 25
+}

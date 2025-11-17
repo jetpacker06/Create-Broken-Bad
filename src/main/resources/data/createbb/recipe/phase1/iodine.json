@@ -1,0 +1,14 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createbb:brine"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:iodine",
+      "amount": 1
+    }
+  ]
+}

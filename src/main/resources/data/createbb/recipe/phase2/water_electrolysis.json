@@ -1,0 +1,28 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 30,
+      "type": "neoforge:single"
+    },
+    {
+      "item": "createbb:copper_zinc_catalyst"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:oxygen",
+      "amount": 10
+    },
+    {
+      "id": "createbb:hydrogen",
+      "amount": 20
+    },
+    {
+      "id": "createbb:copper_zinc_catalyst",
+      "amount": 1
+    }
+  ],
+  "heatRequirement": "heated"
+}

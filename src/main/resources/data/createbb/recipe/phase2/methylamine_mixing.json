@@ -1,0 +1,28 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "createbb:ammonia",
+      "amount": 5,
+      "type": "neoforge:single"
+    },
+    {
+      "fluid": "createbb:methanol",
+      "amount": 5,
+      "type": "neoforge:single"
+    },
+    {
+      "item": "createbb:aluminosilicate_catalyst"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:methylamine",
+      "amount": 10
+    },
+    {
+      "id": "createbb:aluminosilicate_catalyst",
+      "amount": 1
+    }
+  ]
+}

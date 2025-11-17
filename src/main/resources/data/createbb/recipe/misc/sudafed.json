@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createbb:pseudophedrine"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:sudafed",
+      "amount": 1
+    }
+  ]
+}

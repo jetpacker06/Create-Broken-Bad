@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "###"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:plates/brass"
+    },
+    "#": {
+      "tag": "c:ingots/brass"
+    }
+  },
+  "result": {
+    "id": "createbb:brass_call_bell"
+  }
+}

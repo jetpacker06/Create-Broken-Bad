@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "createbb:phenylacetone",
+      "amount": 100,
+      "type": "neoforge:single"
+    },
+    {
+      "fluid": "createbb:methylamine",
+      "amount": 100,
+      "type": "neoforge:single"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:liquid_blue_methamphetamine",
+      "amount": 200
+    }
+  ]
+}

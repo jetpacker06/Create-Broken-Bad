@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "result": {
+    "id": "createbb:tray",
+    "count": 1
+  }
+}

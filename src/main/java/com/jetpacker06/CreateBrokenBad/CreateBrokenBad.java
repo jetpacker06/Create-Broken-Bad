@@ -35,7 +35,6 @@ public class CreateBrokenBad {
         CBBBlocks.register(REGISTRATE);
         CBBFluids.register(REGISTRATE);
         CBBBlockEntityTypes.register(REGISTRATE);
-        AllCustomTriggerAdvancements.register();
 
         CBBAdvancements.register();
 

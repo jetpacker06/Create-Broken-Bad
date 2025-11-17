@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 100,
+      "type": "neoforge:single"
+    },
+    {
+      "item": "createbb:cyanide"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:water",
+      "amount": 75
+    },
+    {
+      "id": "createbb:phenylacetic_acid",
+      "amount": 100
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:aluminosilicate_bit",
+      "amount": 1,
+      "chance": 0.1
+    }
+  ],
+  "processingTime": 30
+}

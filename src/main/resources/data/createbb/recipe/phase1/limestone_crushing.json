@@ -1,0 +1,21 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create:limestone"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:white_phosphorus",
+      "count": 1,
+      "chance": 1
+    },
+    {
+      "id": "createbb:white_phosphorus",
+      "count": 1,
+      "chance": 0.75
+    }
+  ],
+  "processingTime": 100
+}

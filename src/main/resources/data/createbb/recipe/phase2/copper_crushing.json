@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "tag": "c:ingots/copper"
+    }
+  ],
+  "results": [
+    {
+      "id": "createbb:crushed_copper",
+      "amount": 1
+    }
+  ],
+  "processingTime": 25
+}

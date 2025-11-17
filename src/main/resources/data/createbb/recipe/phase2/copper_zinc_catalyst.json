@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "createbb:crushed_zinc"
+    },
+    {
+      "item": "createbb:crushed_copper"
+    },
+    {
+      "item": "createbb:crushed_zinc"
+    },
+    {
+      "item": "createbb:crushed_copper"
+    }
+  ],
+  "result": {
+    "id": "createbb:copper_zinc_catalyst",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "createbb:sudafed"
+    }
+  },
+  "result": {
+    "id": "createbb:sudafed_box",
+    "amount": 1
+  }
+}
