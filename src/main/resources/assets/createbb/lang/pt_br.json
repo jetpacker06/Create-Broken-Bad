@@ -56,9 +56,9 @@
     "match_tooltip": "§8Incendiário de uso único.",
     "brass_call_bell_tooltip": "§8Ding!",
     "ephedra_tooltip": "§8Compre de fazendeiros.",
-  
-  
-    "creativetab.createbb.createbb",
+
+
+  "creativetab.createbb.createbb": "Create: Broken Bad",
 
   "item.createbb.packed_flour": "Packed Flour",
   "item.createbb.popcorners": "Popcorners"
