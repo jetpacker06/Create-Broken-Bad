@@ -1,20 +1,27 @@
 package com.jetpacker06.CreateBrokenBad.register;
 
 import com.jetpacker06.CreateBrokenBad.CreateBrokenBad;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class AllSoundEvents {
-    public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CreateBrokenBad.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> BRASS_CALL_BELL_DING = register("brass_call_bell_ding");
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
+            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, CreateBrokenBad.MOD_ID);
 
-    public static RegistryObject<SoundEvent> register(String name) {
-        return SOUND_EVENTS.register(name, () -> SoundEvent.createFixedRangeEvent(new ResourceLocation(CreateBrokenBad.MOD_ID, name), 16f));
+    public static final DeferredHolder<SoundEvent, SoundEvent> BRASS_CALL_BELL_DING = register("brass_call_bell_ding");
+
+    private static DeferredHolder<SoundEvent, SoundEvent> register(String name) {
+        return SOUND_EVENTS.register(name, () ->
+                SoundEvent.createFixedRangeEvent(
+                        ResourceLocation.fromNamespaceAndPath(CreateBrokenBad.MOD_ID, name),
+                        16f
+                )
+        );
     }
 
     public static void register(IEventBus eventBus) {

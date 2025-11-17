@@ -11,25 +11,25 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
+import net.neoforged.neoforge.fluids.BaseFlowingFluid;
+import net.neoforged.neoforge.fluids.FluidStack;
 
 public class CBBFluids {
     public static Registrate REGISTRATE;
 
-    public static ResourceLocation still = new ResourceLocation("block/water_still");
-    public static ResourceLocation flow = new ResourceLocation("block/water_flow");
+    public static ResourceLocation still = ResourceLocation.withDefaultNamespace("block/water_still");
+    public static ResourceLocation flow = ResourceLocation.withDefaultNamespace("block/water_flow");
 
-    public static FluidEntry<ForgeFlowingFluid.Flowing> LIQUID_BLUE_METHAMPHETAMINE;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> LIQUID_METHAMPHETAMINE;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> METHYLAMINE;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> METHANOL;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> HYDROGEN;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> OXYGEN;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> AMMONIA;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> PHENYLACETIC_ACID;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> ACETIC_ANHYDRIDE;
-    public static FluidEntry<ForgeFlowingFluid.Flowing> PHENYLACETONE;
+    public static FluidEntry<BaseFlowingFluid.Flowing> LIQUID_BLUE_METHAMPHETAMINE;
+    public static FluidEntry<BaseFlowingFluid.Flowing> LIQUID_METHAMPHETAMINE;
+    public static FluidEntry<BaseFlowingFluid.Flowing> METHYLAMINE;
+    public static FluidEntry<BaseFlowingFluid.Flowing> METHANOL;
+    public static FluidEntry<BaseFlowingFluid.Flowing> HYDROGEN;
+    public static FluidEntry<BaseFlowingFluid.Flowing> OXYGEN;
+    public static FluidEntry<BaseFlowingFluid.Flowing> AMMONIA;
+    public static FluidEntry<BaseFlowingFluid.Flowing> PHENYLACETIC_ACID;
+    public static FluidEntry<BaseFlowingFluid.Flowing> ACETIC_ANHYDRIDE;
+    public static FluidEntry<BaseFlowingFluid.Flowing> PHENYLACETONE;
 
     public static ItemEntry<BucketItem> LIQUID_BLUE_METHAMPHETAMINE_BUCKET;
     public static ItemEntry<BucketItem> LIQUID_METHAMPHETAMINE_BUCKET;
@@ -45,20 +45,20 @@ public class CBBFluids {
     /**
      * Creates a white fluid.
      */
-    public static FluidBuilder<ForgeFlowingFluid.Flowing, Registrate> basicFluid(String name) {
+    public static FluidBuilder<BaseFlowingFluid.Flowing, Registrate> basicFluid(String name) {
         return basicFluid(name, 0xffffffff);
     }
 
     /**
      * Creates a fluid with a given color. Use the format 0xAA(hex)
      */
-    public static FluidBuilder<ForgeFlowingFluid.Flowing, Registrate> basicFluid(String name, int color) {
+    public static FluidBuilder<BaseFlowingFluid.Flowing, Registrate> basicFluid(String name, int color) {
         return REGISTRATE.fluid(name, still, flow, (p, r1, r2) -> new NoColorFluidAttributes(p, color))
                 .properties(p -> p.viscosity(500).density(500))//.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL_LAVA))
                 .fluidProperties(p -> p.tickRate(5).slopeFindDistance(6).explosionResistance(100f))
-                .source(ForgeFlowingFluid.Source::new);
+                .source(BaseFlowingFluid.Source::new);
     }
-    public static ItemEntry<BucketItem> getBucket(FluidBuilder<ForgeFlowingFluid.Flowing, Registrate> fluid) {
+    public static ItemEntry<BucketItem> getBucket(FluidBuilder<BaseFlowingFluid.Flowing, Registrate> fluid) {
         return fluid.bucket().properties(p -> p.stacksTo(1)).register();
     }
     public static void register(Registrate registrate) {

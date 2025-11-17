@@ -41,7 +41,7 @@ public class CBBItems {
     public static void register(Registrate REGISTRATE) {
 
         POPCORNERS = REGISTRATE.item("popcorners", Item::new)
-                .properties(p -> p.food(new FoodProperties.Builder().nutrition(2).saturationMod(1f).fast().build()))
+                .properties(p -> p.food(new FoodProperties.Builder().nutrition(2).saturationModifier(1f).fast().build()))
                 .register();
         PACKED_FLOUR = REGISTRATE.item("packed_flour", Item::new)
                 .register();
@@ -76,7 +76,7 @@ public class CBBItems {
                 .register();
         CYANIDE = REGISTRATE.item("cyanide", Item::new)
                 .properties(p -> p.food(new FoodProperties.Builder()
-                        .alwaysEat()
+                        .alwaysEdible()
                         .nutrition(1)
                         .effect(() -> new MobEffectInstance(MobEffects.POISON, 60, 4), 1)
                         .build()

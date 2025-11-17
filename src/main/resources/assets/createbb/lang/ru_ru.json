@@ -57,7 +57,7 @@
   "brass_call_bell_tooltip": "§8Динь!",
   "ephedra_tooltip": "§8Можно купить у фермера",
 
-  "itemGroup.CreateBB": "Create: Всё Тяжко",
+  "creativetab.createbb.createbb": "Create: Всё Тяжко",
 
   "item.createbb.packed_flour": "Packed Flour",
   "item.createbb.popcorners": "Popcorners"

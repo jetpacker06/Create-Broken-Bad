@@ -40,17 +40,16 @@ public abstract class TrayBlock extends Block {
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     @Override
     @ParametersAreNonnullByDefault
-    @SuppressWarnings("deprecation")
     public @NotNull VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return pState.getValue(FACING) == Direction.NORTH || pState.getValue(FACING) == Direction.SOUTH ? shape : rotatedShape;
     }
     @Override
-    public BlockState rotate(BlockState state, LevelAccessor world, BlockPos pos, Rotation direction) {
+    @ParametersAreNonnullByDefault
+    public @NotNull BlockState rotate(BlockState state, LevelAccessor world, BlockPos pos, Rotation direction) {
         return super.rotate(state, world, pos, direction);
     }
     @Override
     @ParametersAreNonnullByDefault
-    @SuppressWarnings("deprecation")
     public @NotNull RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }
@@ -69,7 +68,6 @@ public abstract class TrayBlock extends Block {
     }
     @Override
     @ParametersAreNonnullByDefault
-    @SuppressWarnings("deprecation")
     public @NotNull VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return pState.getValue(FACING) == Direction.NORTH || pState.getValue(FACING) == Direction.SOUTH ? shape : rotatedShape;
     }

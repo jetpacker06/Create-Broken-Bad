@@ -15,12 +15,12 @@ public class NonConsumedCatalystItem extends Item {
         super(pProperties);
     }
     @Override
-    public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("not_consumed_tooltip"));
+    public void appendHoverText(@NotNull ItemStack stack, Item.@NotNull TooltipContext context, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+        tooltip.add(Component.translatable("not_consumed_tooltip"));
     }
 
     @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
+    public @NotNull ItemStack getCraftingRemainingItem(@NotNull ItemStack itemStack) {
         return itemStack;
     }
 }
