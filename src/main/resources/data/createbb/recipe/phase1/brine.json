@@ -20,5 +20,5 @@
       "amount": 1
     }
   ],
-  "heatRequirement": "heated"
+  "heat_requirement": "heated"
 }

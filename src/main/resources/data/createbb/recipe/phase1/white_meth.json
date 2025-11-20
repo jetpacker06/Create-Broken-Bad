@@ -22,5 +22,5 @@
       "amount": 200
     }
   ],
-  "heatRequirement": "heated"
+  "heat_requirement": "heated"
 }
